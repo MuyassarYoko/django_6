@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load filters %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock style %}
+
+{% block content %}
+    <h1>Welcome</h1>
+<!--    {{ name|truncatewords:2 }}-->
+<!--{{ name|truncatechars:10 }}-->
+{{ num_list|length}}
+{{ name|wordcount }}
+
+{% for num in num_list %}
+    <p>{{num}}</p>
+{% empty %}
+<p>Null list</p>
+{% endfor %}
+
+<!--xxx-->
+<!--{% for num in 1..10 %}-->
+<!--    <p>{{num}}</p>-->
+<!--{% endfor %}-->
+
+<!--{{ dt|date:"Y-m-d H:i" }}-->
+
+<!--{% lorem 1 %}-->
+
+<!--{% now "H:i:s" %}-->
+
+{{ 10|mul:5|mul:3 }}
+
+    <br><a href="{% url 'index' %}">Index</a>
+{% endblock %}

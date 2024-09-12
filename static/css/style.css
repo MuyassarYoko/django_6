@@ -1,0 +1,48 @@
+body{
+    background: lightyellow;
+}
+
+.head_container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px ;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.head_h1{
+    font-size: 40px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.logs{
+    display: flex;
+    flex-direction: column;
+}
+
+.user{
+    border: 2px solid black;
+    border-radius: 5px;
+    background: #D24136;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    color: #785A46;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: overline;
+}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock style %}
+
+{% block content %}
+    <h1>Welcome</h1>
+    <h2>to my page</h2><br>
+    <a href="{% url 'indexx' %}">Indexx</a>
+
+{% endblock %}

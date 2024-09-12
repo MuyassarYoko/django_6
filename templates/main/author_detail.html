@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock style %}
+
+{% block content %}
+<h1>Welcome</h1>
+<h2>Authors</h2>
+<p>Fio: {{author.fio}}</p>
+<p>Birthdate: {{author.birth_date}}</p>
+<h2>Books</h2>
+{% for book in books %}
+    <p>Name: {{book.name}}</p>
+    <p>Year: {{book.year}}</p>
+    <p>Num pages: {{book.num_pages}}</p>
+{% endfor %}
+<hr>
+<br><a href="{% url 'index' %}">Index</a>
+
+{% endblock %}

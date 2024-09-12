@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock style %}
+
+{% block content %}
+<h1>Welcome</h1>
+<h2>Authors</h2>
+{% for author in authors %}
+<p>Fio: {{author.fio}}</p>
+<p>Birthdate: {{author.birth_date}}</p>
+<hr>
+{% endfor %}
+<br><a href="{% url 'index' %}">Index</a>
+
+{% endblock %}
